@@ -1,2 +1,6 @@
 streamlit
 streamlit_extras
+shap
+pandas
+joblib
+matplotlib
