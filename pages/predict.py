@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import shap
+import shap as sp
 from joblib import load
 import matplotlib.pyplot as plt
 
@@ -214,7 +214,7 @@ if predict_button == True:
     with container2:
         st.header("Summary Plot")
         fig = plt.figure(figsize=(6,8))
-        shap.summary_plot(shap_values, input_data_scaled, feature_names=X.columns.tolist(), show=False)
+        sp.summary_plot(shap_values, input_data_scaled, feature_names=X.columns.tolist(), show=False)
         st.pyplot(fig)
     
     # Info on how to read plot and SHAP values
